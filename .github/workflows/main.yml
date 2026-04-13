@@ -1,17 +1,17 @@
 name: Validar SKUs en Google Sheets
 
 on:
-  workflow_dispatch: # Esto crea un botón manual en GitHub para arrancar el proceso
+  workflow_dispatch: 
 
 jobs:
   validar_modelos:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Actualizado a la última versión
 
       - name: Instalar Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Actualizado a la última versión
         with:
           python-version: '3.10'
 
